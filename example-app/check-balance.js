@@ -24,7 +24,6 @@ async function runHappyPath() {
         if (!statsResponse.ok) {
             throw new Error(`Faucet API returned ${statsResponse.status}: Are you sure ZecKit Devnet is running?`);
         }
-
         const stats = await statsResponse.json();
         console.log(`✅ Success! Faucet has:`);
         console.log(`   - Transparent Balance: ${stats.transparent_balance} ZEC`);
